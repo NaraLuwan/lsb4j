@@ -6,8 +6,6 @@ package com.luwan.github.lsb.utils;
  */
 public final class StringUtils {
 
-    public static final String EMPTY = "";
-
     /**
      * <p>Checks if a String is whitespace, empty ("") or null.</p>
      *
@@ -54,42 +52,4 @@ public final class StringUtils {
     public static boolean isNotBlank(String str) {
         return !StringUtils.isBlank(str);
     }
-
-    /**
-     * <p>Removes control characters (char &lt;= 32) from both ends of this String returning an empty
-     * String ("") if the String is empty ("") after the trim or if it is <code>null</code>.
-     *
-     * <p>The String is trimmed using {@link String#trim()}. Trim removes start and end characters
-     * &lt;= 32. </p>
-     *
-     * <pre>
-     * StringUtils.trimToEmpty(null)          = ""
-     * StringUtils.trimToEmpty("")            = ""
-     * StringUtils.trimToEmpty("     ")       = ""
-     * StringUtils.trimToEmpty("abc")         = "abc"
-     * StringUtils.trimToEmpty("    abc    ") = "abc"
-     * </pre>
-     *
-     * @param str the String to be trimmed, may be null
-     * @return the trimmed String, or an empty String if <code>null</code> input
-     * @since 2.0
-     */
-    public static String trimToEmpty(String str) {
-        return str == null ? EMPTY : str.trim();
-    }
-
-    public static void printHexString(byte[] array, int groupCount) {
-        if (array != null) {
-            int count = 0;
-            for (int i = 0; i < array.length; i++) {
-                System.out.printf("0x%02X, ", array[i]);
-                count++;
-                if (count == groupCount) {
-                    count = 0;
-                    System.out.println();
-                }
-            }
-        }
-    }
-
 }

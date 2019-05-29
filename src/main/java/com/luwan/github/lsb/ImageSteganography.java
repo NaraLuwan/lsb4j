@@ -18,6 +18,7 @@ public class ImageSteganography {
 
     /**
      * 将数据隐写到图片
+     *
      * @param data      待隐写的数据
      * @param password  AES加密数据的密码
      * @param imagePath 图片路径
@@ -54,6 +55,7 @@ public class ImageSteganography {
 
     /**
      * 从图片中读取隐写的数据
+     *
      * @param inputStream
      * @return
      */
