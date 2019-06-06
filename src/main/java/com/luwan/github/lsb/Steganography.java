@@ -1,7 +1,5 @@
 package com.luwan.github.lsb;
 
-import com.luwan.github.lsb.base.Constants;
-
 import java.awt.image.BufferedImage;
 
 /**
@@ -9,6 +7,8 @@ import java.awt.image.BufferedImage;
  * @date 2019/5/29
  */
 public class Steganography {
+
+    private static final int HIDDEN_MESSAGE_BIT_LENGTH = 32;
 
     /**
      * Encodes message into the given image
@@ -60,7 +60,7 @@ public class Steganography {
             bufferedImage = this.encodeText(bufferedImage, len, offset);
             // Encode the message
             bufferedImage = this
-                    .encodeText(bufferedImage, msg, offset + Constants.HIDDEN_MESSAGE_BIT_LENGTH);
+                    .encodeText(bufferedImage, msg, offset + HIDDEN_MESSAGE_BIT_LENGTH);
         } catch (Exception e) {
             throw new RuntimeException("Error encoding image!", e);
         }
@@ -142,7 +142,7 @@ public class Steganography {
     private byte[] decodeText(final BufferedImage bufferedImage, final int startingOffset) {
         // Initialize starting variables
         final int height = bufferedImage.getHeight();
-        final int offset = startingOffset + Constants.HIDDEN_MESSAGE_BIT_LENGTH;
+        final int offset = startingOffset + HIDDEN_MESSAGE_BIT_LENGTH;
         int length = 0;
 
         // Loop through 32 bytes of data to determine text length
