@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.File;
-import java.io.InputStream;
-import java.net.URL;
 
 /**
  * @author luwan
@@ -13,18 +11,17 @@ import java.net.URL;
  */
 public class LsbTest {
 
-    private String DATA = "hello lsb";
-
     @Test
     public void toImgAESWithPW() throws Exception {
-        URL url = LsbTest.class.getResource("/test.png");
-        File file = new File(url.toURI());
-        boolean retBool = ImageSteganography.toImg(DATA, "testPassword", file.getPath());
-        Assert.assertTrue(retBool);
+        String imgPath = "/test.png";   // 图片路径
+        String text = "hello lsb";      // 要隐藏的数据
+        String passWord = "lsb";        // 密码 可根据需要指定
+        File file = new File(LsbTest.class.getResource(imgPath).toURI());
+        boolean writeToImgResult = ImageSteganography.writeToImg(text, passWord, file.getPath());
+        Assert.assertTrue(writeToImgResult);
 
-        InputStream inputStream = LsbTest.class.getResourceAsStream("/test.png");
-        String data = ImageSteganography.fromImg(inputStream);
-        Assert.assertTrue(DATA.equals(data));
+        String data = ImageSteganography.readFromImg(LsbTest.class.getResourceAsStream(imgPath));
+        Assert.assertTrue(text.equals(data));
     }
 
 }

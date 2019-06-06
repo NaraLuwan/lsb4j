@@ -24,7 +24,7 @@ public class ImageSteganography {
      * @param imagePath 图片路径
      * @return
      */
-    public static boolean toImg(String data, String password, String imagePath) {
+    public static boolean writeToImg(String data, String password, String imagePath) {
         File imageFile = new File(imagePath);
         InputStream inputStream = null;
         try {
@@ -59,7 +59,7 @@ public class ImageSteganography {
      * @param inputStream
      * @return
      */
-    public static String fromImg(InputStream inputStream) {
+    public static String readFromImg(InputStream inputStream) {
         try {
             BufferedImage image = LsbUtils.streamToImage(inputStream);
 
