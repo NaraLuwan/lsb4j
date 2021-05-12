@@ -1,15 +1,15 @@
-package com.luwan.github.lsb;
+package luwan.lsb;
 
-import com.luwan.github.lsb.utils.AesCrypt;
-import com.luwan.github.lsb.utils.ImageUtils;
-import com.luwan.github.lsb.utils.LsbUtils;
+import luwan.lsb.utils.AesCrypt;
+import luwan.lsb.utils.ImageUtils;
+import luwan.lsb.utils.LsbUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
 /**
- * @author luwan
+ * @author NaraLuwan
  * @date 2019/5/29
  */
 public class ImageSteganography {

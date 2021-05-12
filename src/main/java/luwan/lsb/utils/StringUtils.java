@@ -1,7 +1,7 @@
-package com.luwan.github.lsb.utils;
+package luwan.lsb.utils;
 
 /**
- * @author luwan
+ * @author NaraLuwan
  * @date 2019/5/29
  */
 public final class StringUtils {

@@ -1,9 +1,9 @@
-package com.luwan.github.lsb;
+package luwan.lsb;
 
 import java.awt.image.BufferedImage;
 
 /**
- * @author luwan
+ * @author NaraLuwan
  * @date 2019/5/29
  */
 public class Steganography {

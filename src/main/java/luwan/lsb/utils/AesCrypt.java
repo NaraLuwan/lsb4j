@@ -1,4 +1,4 @@
-package com.luwan.github.lsb.utils;
+package luwan.lsb.utils;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -16,7 +16,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
  * Encrypt and decrypt messages using AES 256 bit encryption that are compatible with AESCrypt-ObjC
  * and AESCrypt Ruby.
  *
- * @author luwan
+ * @author NaraLuwan
  * @date 2019/5/29
  */
 public final class AesCrypt {

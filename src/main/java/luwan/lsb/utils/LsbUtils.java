@@ -1,4 +1,4 @@
-package com.luwan.github.lsb.utils;
+package luwan.lsb.utils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -8,7 +8,7 @@ import java.io.InputStream;
 /**
  * Public utility class holding a lot of useful methods
  *
- * @author luwan
+ * @author NaraLuwan
  * @date 2019/5/29
  */
 public class LsbUtils {

@@ -1,9 +1,9 @@
-package com.luwan.github.lsb.utils;
+package luwan.lsb.utils;
 
 import java.io.File;
 
 /**
- * @author luwan
+ * @author NaraLuwan
  * @date 2019/5/29
  */
 public class ImageUtils {
