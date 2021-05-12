@@ -1,21 +1,35 @@
-# ImageLSB
+## 项目简介
 
 - 基于LSB算法隐藏数据到图片中丨从图片中提取隐藏的数据
 - 支持png、bmp等不压缩或无损压缩的图片格式
 
-# eg
+## Quick Start
 
-```java
-    @Test
-    public void toImgAESWithPW() throws Exception {
-        String imgPath = "/test.png";   // 图片路径
-        String text = "hello lsb";      // 要隐藏的数据
-        String passWord = "lsb";        // 密码 可根据需要指定
-        File file = new File(LsbTest.class.getResource(imgPath).toURI());
-        boolean writeToImgResult = ImageSteganography.writeToImg(text, passWord, file.getPath());
-        Assert.assertTrue(writeToImgResult);
+- 示例代码详见： [LsbTest](https://github.com/NaraLuwan/sm2sm3sm4/blob/master/src/test/java/com/luwan/github/sm/SmTest.java)
 
-        String data = ImageSteganography.readFromImg(LsbTest.class.getResourceAsStream(imgPath));
-        Assert.assertTrue(text.equals(data));
-    }
+## 项目结构
+```text
+lsb4j
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─luwan
+    │  │      └─lsb
+    │  │          │  ImageSteganography.java
+    │  │          │  Steganography.java
+    │  │          │
+    │  │          └─utils
+    │  │                  AesCrypt.java
+    │  │                  ImageUtils.java
+    │  │                  LsbUtils.java
+    │  │                  StringUtils.java
+    │  │
+    │  └─resources
+    │          test.png
+    │
+    └─test
+        └─java
+            └─luwan
+                └─lsb
+                        LsbTest.java
 ```
