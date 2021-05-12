@@ -5,7 +5,7 @@
 
 ## Quick Start
 
-- 示例代码详见： [LsbTest](https://github.com/NaraLuwan/sm2sm3sm4/blob/master/src/test/java/com/luwan/github/sm/SmTest.java)
+- 示例代码详见： [LsbTest](https://github.com/NaraLuwan/lsb4j/blob/master/src/test/java/luwan/lsb/LsbTest.java)
 
 ## 项目结构
 ```text
